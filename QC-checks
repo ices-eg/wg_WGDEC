@@ -14,4 +14,4 @@ Sea-pen fields | VME\_HabitatType like ‘SP’ = VME\_HabitatSubtype not in ('H
 Hydrothermal vents/fields | VME\_HabitatType like ‘HTF’ = VME\_HabitatSubtype not in ('HB%', 'SB%' 'LMR', 'SVR') | Error 
 Gorgonian | If TaxonLatinName is 'Acanthogorgia' and VME\_Indicator is not null, the VME\_Indicator should be 'GG'? | Error 
 Soft Coral | If TaxonLatinName is ' Alcyoniina' and VME\_Indicator is not null, the VME\_Indicator should be 'SC'? | Error 
-Soft Coral | If TaxonLatinName is ' Alcyonacea' and VME\_Indicator is not null, the VME\_Indicator should be 'SC'? | Error 
+Soft Coral | If TaxonLatinName is ' Alcyonacea' and VME\_Indicator is not null, the VME\_Indicator should be 'SC'? | hello
