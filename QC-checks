@@ -1,15 +1,17 @@
 table of function and descriptions of checks in VME database
 
-| Deep-sea sponge aggregations | VME\_HabitatType like 'DS’ = TaxonLatinName not like 'Acanella arbuscula' | Warning |
-| Cold-water coral reef | VME\_HabitatType like 'CC' = TaxonLatinName not like 'Acanthogorgia' | Warning |
-| Cold-water coral reef | VME\_HabitatType like 'CC' = TaxonLatinName not like 'Alcyonacea' | Warning |
-| Cold-water coral reef | VME\_HabitatType like 'CC' = TaxonLatinName not like 'Alcyoniina' | Warning |
-| Cold-water coral reef | VME\_HabitatType like 'CC' = TaxonLatinName not like 'Geodia ' | Error |
-| Cold-water coral reef | VME\_HabitatType like 'CC' = VME\_HabitatSubtype not in ('HB%’, ‘SB%’, ‘VA’, ‘VI’) | Error |
-| Coral Gardens | VME\_HabitatType like 'CG' = VME\_HabitatSubtype not in ('LMR’, ‘SVR’, ‘VA’, ‘VI’) | Error |
-| Mud & sand emergent fauna | VME\_HabitatType like ('BP', 'SCA', 'TAA', 'XA') = VME\_HabitatSubtype not in ('HB%', 'SB%', 'LMR', 'SVR', 'VA', 'VI') | Error |
-| Sea-pen fields | VME\_HabitatType like ‘SP’ = VME\_HabitatSubtype not in ('HB%', 'SB%', 'LMR', 'SVR', 'VA', 'VI') | Error |
-| Hydrothermal vents/fields | VME\_HabitatType like ‘HTF’ = VME\_HabitatSubtype not in ('HB%', 'SB%' 'LMR', 'SVR') | Error |
-| Gorgonian | If TaxonLatinName is 'Acanthogorgia' and VME\_Indicator is not null, the VME\_Indicator should be 'GG'? | Error |
-| Soft Coral | If TaxonLatinName is ' Alcyoniina' and VME\_Indicator is not null, the VME\_Indicator should be 'SC'? | Error |
-| Soft Coral | If TaxonLatinName is ' Alcyonacea' and VME\_Indicator is not null, the VME\_Indicator should be 'SC'? | Error |
+Check | Details | type of error
+---------------------|---------------------|-------------------|
+Deep-sea sponge aggregations | VME\_HabitatType like 'DS’ = TaxonLatinName not like 'Acanella arbuscula' | Warning 
+Cold-water coral reef | VME\_HabitatType like 'CC' = TaxonLatinName not like 'Acanthogorgia' | Warning 
+Cold-water coral reef | VME\_HabitatType like 'CC' = TaxonLatinName not like 'Alcyonacea' | Warning 
+Cold-water coral reef | VME\_HabitatType like 'CC' = TaxonLatinName not like 'Alcyoniina' | Warning 
+Cold-water coral reef | VME\_HabitatType like 'CC' = TaxonLatinName not like 'Geodia ' | Error 
+Cold-water coral reef | VME\_HabitatType like 'CC' = VME\_HabitatSubtype not in ('HB%’, ‘SB%’, ‘VA’, ‘VI’) | Error 
+Coral Gardens | VME\_HabitatType like 'CG' = VME\_HabitatSubtype not in ('LMR’, ‘SVR’, ‘VA’, ‘VI’) | Error 
+Mud & sand emergent fauna | VME\_HabitatType like ('BP', 'SCA', 'TAA', 'XA') = VME\_HabitatSubtype not in ('HB%', 'SB%', 'LMR', 'SVR', 'VA', 'VI') | Error 
+Sea-pen fields | VME\_HabitatType like ‘SP’ = VME\_HabitatSubtype not in ('HB%', 'SB%', 'LMR', 'SVR', 'VA', 'VI') | Error 
+Hydrothermal vents/fields | VME\_HabitatType like ‘HTF’ = VME\_HabitatSubtype not in ('HB%', 'SB%' 'LMR', 'SVR') | Error 
+Gorgonian | If TaxonLatinName is 'Acanthogorgia' and VME\_Indicator is not null, the VME\_Indicator should be 'GG'? | Error 
+Soft Coral | If TaxonLatinName is ' Alcyoniina' and VME\_Indicator is not null, the VME\_Indicator should be 'SC'? | Error 
+Soft Coral | If TaxonLatinName is ' Alcyonacea' and VME\_Indicator is not null, the VME\_Indicator should be 'SC'? | Error 
