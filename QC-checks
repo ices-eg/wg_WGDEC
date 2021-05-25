@@ -15,3 +15,20 @@ Hydrothermal vents/fields | VME\_HabitatType like ‘HTF’ = VME\_HabitatSubtyp
 Gorgonian | If TaxonLatinName is 'Acanthogorgia' and VME\_Indicator is not null, the VME\_Indicator should be 'GG'? | Error 
 Soft Coral | If TaxonLatinName is ' Alcyoniina' and VME\_Indicator is not null, the VME\_Indicator should be 'SC'? | Error 
 Soft Coral | If TaxonLatinName is ' Alcyonacea' and VME\_Indicator is not null, the VME\_Indicator should be 'SC'? | hello
+The reported depth (DepthUpper, DepthLower, DepthShoot, DepthHaul) is shallower than 190 m?	A check as to whether this record would be classed as coming from shallow water.  Generally, shallow water records would not be included within the VME Database without strong justification.	Warning
+CruiseID check	A check to see whether the CruiseID already exists within the database. If it does, this could signify a resubmission of data.	Warning
+Start date cannot be after end date of cruise/survey	This check ensures that the start date of the cruise/survey does not occur after the end date.	Critical Error
+ObservationDate check	The ObservationDate must occur between the StartDate and EndDate of the cruise/survey.	Critical Error
+VME_Habitat_Type is not valid for trawl data	This checks that VME_Habitat_Type records have not been associated with trawl DataCollectionMethod types.  Trawls can only be associated with VME_Indicator records	Critical Error
+Sample position (StartLatitude/Longitude, MiddleLatitude/Longitude, EndLatitude/Longitude) is on land	A check as to whether either the start, middle or end position of a sample is on land, with land being classed as ‘shallower than’ the ‘0 m’ isobath from the Gebco global bathmetry dataset.	Critical Error
+Invalid species name or AphiaID 	Species names and/or AphiaID are checked against the current WoRMS  database for errors.	Critical Error
+GeometryType check	If the GeometryType is classified as ‘Line’, then StartLatitude/Longitude and EndLatitude/Longitude  should not be blank	Critical Error
+VMEKey check	VMEKey cannot be blank if VME_Habitat_Type  is populated	Critical Error
+VME_Indicator check	When the VME_Indicator field is populated, either the GeneralTaxonDescriptor and/or the TaxonLatinName or AphiaID should be populated	Critical Error
+Mixing of VME data submission types	VME Indicator cannot be populated when VME_Habitat_Type is populated (and vice versa)	Critical Error
+MiddleLatitude 	The MiddleLatitude should be between StartLatitude and EndLatitude, although note that some ROV transects may twist and turn, meaning that this rule will not be true.	Warning
+MiddleLongitude 	The MiddleLongitude should be between StartLongitude and EndLongitude, although note that some ROV transects may twist and turn, meaning that this rule will not be true.	Warning
+All Mandatory fields	A general check that all mandatory fields are populated	Critical Error
+Check of DataCollectionMethod with GeometryType 	For ‘SITC’, ‘SIROV’ and other towed camera systems, an expectation that the GeometryType would be ‘Line’, with a different start and end lat/long	Warning
+Cross check of record depth with GEBCO	Extract depth (start/end) from record and compare with GEBCO dataset (would need a predefined depth tolerance – for example 10% difference). Flag (and state apparent difference) if large difference between GEBCO depth and record depth 	Warning
+Incorrect spatial position information	Check that the location of the record does not fall outside the study area – for example should be within the NEAFC, NAFO or EU member states waters	Warning
