@@ -13,7 +13,7 @@ library(RODBC)
 mkdir("data")
 
 # DB settings
-dbConnection <- 'Driver={SQL Server};Server=SQL06;Database=VME;Trusted_Connection=yes'
+dbConnection <- 'Driver={SQL Server};Server=SQL10;Database=VME;Trusted_Connection=yes'
 
 # download and save VME scores locally
 conn <- odbcDriverConnect(connection = dbConnection)

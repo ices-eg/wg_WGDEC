@@ -30,7 +30,7 @@ results$Conf_Name <- NA_character_
 msg("Creating / updating: dbo.tbl_VMEWeightingAlgorithm")
 conn <- dbConnect(odbc::odbc(),
                  driver="{SQL Server Native Client 11.0}",
-                 server="SQL06",
+                 server="SQL10",
                  Trusted_Connection = "yes",
                  database = "VME")
 tbl <- Id(schema = "dbo", table = "tbl_VMEWeightingAlgorithm")
@@ -42,7 +42,7 @@ dbDisconnect(conn)
 # run procedure
 msg("Running update SQL procedure up_updateWeighting_algorithm_classes...")
 # DB settings
-dbConnection <- 'Driver={SQL Server};Server=SQL06;Database=VME;Trusted_Connection=yes'
+dbConnection <- 'Driver={SQL Server};Server=SQL10;Database=VME;Trusted_Connection=yes'
 # execute stored procedure
 conn <- odbcDriverConnect(connection = dbConnection)
 ret <- sqlQuery(conn, "EXEC dbo.up_updateWeighting_algorithm_classes")
